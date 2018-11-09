@@ -8,6 +8,7 @@ body {
 }
 
 .preload {
+  background-image: url('../img/glassImg1.png');
   position: absolute;
   width: 100px;
   height: 100px;
@@ -23,7 +24,24 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+.glass-pane {
+  position: relative;
+}
+
+.glass-pane::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  bottom: 0; left: 0;
+  background-image: url('../img/glassTexture.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+
 }
 
 .crack-container {
@@ -48,6 +66,7 @@ body {
   background-size: cover;
   background-position: center;
   animation: cracking 0.3s forwards;
+  z-index: 100;
 }
 
 .crack-2 {

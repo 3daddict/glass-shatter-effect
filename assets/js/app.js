@@ -7,14 +7,14 @@ function InitApp() {
 
 function glassCrack() {
   var crackCount = 0;
-  
   var preLoad = document.getElementsByClassName("preload")[0];
   preLoad.style.display = "none";
   function createCrack(top, left) {
-    crackCount++;
+    crackCount += 1;
+    // var className = "crack" + eval(crackCount);
     var className = "crack" + crackCount;
     var newDiv = document.createElement("div");
-    newDiv.setAttribute("class", className + "crack-container");
+    newDiv.setAttribute("class", className + " crack-container");
 
     var innerCrack = document.createElement("div");
     innerCrack.setAttribute("class", "crack");
@@ -24,7 +24,6 @@ function glassCrack() {
 
     newDiv.style.top = top + "px";
     newDiv.style.left = left + "px";
-
     console.log(crackCount);
   }
 
