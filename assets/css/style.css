@@ -101,3 +101,30 @@ body {
     clip-path: circle(100%);
   }
 }
+
+img {
+  max-width: 300px;;
+}
+.card {
+  border-radius: 4px;
+  margin: 15px auto;
+}
+
+.card-img-top {
+  position: relative;
+}
+
+.card-body {
+  position: absolute;
+  color: #EEE;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .2s;
+}
+
+.card-body:hover {
+  background: rgba(0,0,0, .65);
+  opacity: 1;
+  height: 100%;
+  cursor: pointer;
+}
