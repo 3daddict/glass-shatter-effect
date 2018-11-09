@@ -12,10 +12,9 @@ function glassCrack() {
   preLoad.style.display = "none";
   function createCrack(top, left) {
     crackCount++;
-    // var className = "crack" + eval(crackCount);
     var className = "crack" + crackCount;
     var newDiv = document.createElement("div");
-    newDiv.setAttribute("class", className + " crack-container");
+    newDiv.setAttribute("class", className + "crack-container");
 
     var innerCrack = document.createElement("div");
     innerCrack.setAttribute("class", "crack");
