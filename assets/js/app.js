@@ -1,7 +1,5 @@
 $(document).ready(InitApp);
 
-
 function InitApp(){
-    console.log('App Ready');
-};
-
+    console.log('App Ready')
+}
