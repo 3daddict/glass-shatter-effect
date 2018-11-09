@@ -26,6 +26,9 @@ function glassCrack() {
     }
     if (crackCount === 3) {
       innerCrack.setAttribute("class", "crack-2");
+      setTimeout(() => {
+        console.log('glass should explode now')
+      },300)
     } 
     
     newDiv.appendChild(innerCrack);
