@@ -7,12 +7,12 @@ function InitApp() {
   document.getElementById("target").style.height = window.innerHeight + "px";
   glassCrack();
   if ( $(window).width() > 768) {      
-    document.getElementById("target-img").src="../img/glassTexture.png";
+    document.getElementById("target-img").src="./assets/img/glassTexture.png";
     crackSize = 100;
     crackRadius = 300;
   } 
   else {
-    document.getElementById("target-img").src="../img/glassTextureMd.png";
+    document.getElementById("target-img").src="./assets/img/glassTextureMd.png";
     crackSize = 40;
     crackRadius = 100;
   }
