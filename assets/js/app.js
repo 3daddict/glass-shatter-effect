@@ -26,7 +26,7 @@ function glassCrack() {
     if (crackCount === 3) {
       $(".crack-container").remove();
       explode();
-      $(".explode-wrapper").fadeOut(1000);
+      $(".explode-wrapper").fadeOut(2000);
 	}
 	if (crackCount === 4) {
 		return;
@@ -48,11 +48,11 @@ function explode() {
   $("#target-img").explodeRestore();
   $("#target-img").explode({
     maxWidth: 12,
-    minWidth: 30,
+    minWidth: 100,
     radius: 300,
     release: false,
     recycle: false,
-    explodeTime: 78,
+    explodeTime: 30,
     canvas: true,
     maxAngle: 360,
     gravity: true
