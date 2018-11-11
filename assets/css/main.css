@@ -1,54 +1,62 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+}
+
 .preload {
   background-image: url("../img/glassImg1.png");
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 0;
-  left: 0;
-  background-size: contain;
 }
 
 .wrapper {
-  position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   z-index: -1;
 }
 
 /* Best to place a dark background here for the hero image */
 #target {
+  display: flex;
   position: relative;
-  border: 2px solid #333;
-  width: 100%;
-  background-image: url("https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: url("https://unsplash.it/1500?random");
   background-size: cover;
+  background-position: center;
   cursor: pointer;
 }
 .card-img-top {
+  display: flex;
   position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
 }
 
 .content-behind {
-  position: relative;
-  left: 0;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
   z-index: 1;
-  opacity: 0.8;
+  background: black;
+  padding: 25px;
+  opacity: 0.6;
 }
-.content-behind h1,
-.content-behind p {
-  color: #fff;
-  font-size: 18px;
-  z-index: 1;
+
+.content-behind h1, .content-behind h3 {
+  color: white;
+  line-height: 1;
+}
+.content-behind h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  margin-bottom: 0;
+  text-align: center;
+}
+.content-behind h3 {
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  font-weight: normal;
 }
 
 .crack-container {
@@ -56,7 +64,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 20%;
+  width: 60%;
+  /* height: 40%; */
   padding-bottom: 20%;
   transform: translate(-50%, -70%);
   transform-origin: center;
@@ -95,5 +104,45 @@
   }
   100% {
     clip-path: circle(100%);
+  }
+}
+
+@media all and (min-width: 1024px){
+  .content-behind h1 {
+    font-size: 4rem;
+  }
+  .content-behind h3 {
+    font-size: 4rem;
+    margin: 15px auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .content-behind h1 {
+    font-size: 3rem;
+  }
+  .content-behind h3 {
+    font-size: 3rem;
+    margin: 20px auto;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .content-behind h1 {
+    font-size: 2.5rem;
+  }
+  .content-behind h3 {
+    font-size: 2.5rem;
+    margin: 20px auto;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .content-behind h1 {
+    font-size: 2rem;
+  }
+  .content-behind h3 {
+    font-size: 2rem;
+    margin: 25px auto;
   }
 }

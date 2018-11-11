@@ -1,8 +1,21 @@
 $(document).ready(InitApp);
 
+let crackSize = 100;
+let crackRadius = 300;
+
 function InitApp() {
   document.getElementById("target").style.height = window.innerHeight + "px";
   glassCrack();
+  if ( $(window).width() > 768) {      
+    document.getElementById("target-img").src="../assets/img/glassTexture.png";
+    crackSize = 100;
+    crackRadius = 300;
+  } 
+  else {
+    document.getElementById("target-img").src="../assets/img/glassTextureMd.png";
+    crackSize = 40;
+    crackRadius = 100;
+  }
 }
 
 function glassCrack() {
@@ -26,7 +39,7 @@ function glassCrack() {
     if (crackCount === 3) {
       $(".crack-container").remove();
       explode();
-      $(".explode-wrapper").fadeOut(1000);
+      $(".explode-wrapper").fadeOut(2000);
 	}
 	if (crackCount === 4) {
 		return;
@@ -48,11 +61,11 @@ function explode() {
   $("#target-img").explodeRestore();
   $("#target-img").explode({
     maxWidth: 12,
-    minWidth: 30,
-    radius: 300,
+    minWidth: crackSize,
+    radius: crackRadius,
     release: false,
     recycle: false,
-    explodeTime: 78,
+    explodeTime: 30,
     canvas: true,
     maxAngle: 360,
     gravity: true
