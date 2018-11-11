@@ -1,7 +1,6 @@
 $(document).ready(InitApp);
 
 function InitApp() {
-  console.log("App Ready");
   document.getElementById("target").style.height = window.innerHeight + "px";
   glassCrack();
 }
@@ -18,7 +17,6 @@ function glassCrack() {
     crackCount++;
 
     let innerCrack = document.createElement("div");
-    console.log(crackCount);
     if (crackCount === 1) {
       innerCrack.setAttribute("class", "crack");
     }
